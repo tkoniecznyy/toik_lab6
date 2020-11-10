@@ -32,13 +32,21 @@ public class Main {
             } catch(Quiz.ParamTooLarge ptl) {
 
                 System.out.println("Argument za duzy!!!");
-                digit--;
+                if(digit>Quiz.MIN_VALUE) {
+                    System.out.println((golden(digit--)));
+                }
             } catch(Quiz.ParamTooSmall pts) {
 
                 System.out.println("Argument za maly!!!");
-                digit++;
+               if(digit<Quiz.MAX_VALUE){
+                   digit= (int) (digit*Main.golden(digit));
+               }
             }
         }
+    }
+    public static double golden(int n) {
+        if (n == 0) return 1;
+        return 1.0 + 1.0 / golden(n - 1);
     }
 }
 

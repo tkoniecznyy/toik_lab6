@@ -3,9 +3,9 @@ package com.tkonieczny;
 interface Quiz {
 
     // minimalny zakres poszukiwan
-    int MIN_VALUE = 0;
+    static int MIN_VALUE = 0;
     // maksymalny zakres poszukiwan
-    int MAX_VALUE = 1000;
+    static int MAX_VALUE = 1000;
 
     /**
      * metoda rzuca wyjatek ParamTooLarge w

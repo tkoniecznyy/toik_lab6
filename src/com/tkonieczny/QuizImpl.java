@@ -4,7 +4,7 @@ public class QuizImpl implements Quiz{
     private int digit;
 
     public QuizImpl() {
-        this.digit = 196;	// zmienna moze ulegac zmianie!
+        this.digit = 675;	// zmienna moze ulegac zmianie!
     }
 
     @Override
