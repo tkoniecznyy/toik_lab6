@@ -15,10 +15,10 @@ public class Main {
      * przestanie rzucac wyjatki wowczas mamy pewnosc ze
      * poszukiwana zmienna zostala odnaleziona.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 
         Quiz quiz = new QuizImpl();
-        int digit = ; // zainicjuj zmienna
+        int digit = 216; // zainicjuj zmienna
 
         for(int counter = 1; ;counter++) {
 
@@ -29,17 +29,17 @@ public class Main {
                         + digit + " Ilosc prob: " + counter);
                 break;
 
-            } catch(/* obsluga odpowiedniego wyjatku */) {
+            } catch(Quiz.ParamTooLarge ptl) {
 
                 System.out.println("Argument za duzy!!!");
-                // implementacja logiki...
-            } catch(/* obsluga odpowiedniego wyjatku */) {
+                digit--;
+            } catch(Quiz.ParamTooSmall pts) {
 
                 System.out.println("Argument za maly!!!");
-                // implementacja logiki...
+                digit++;
             }
         }
     }
 }
 
-}
+

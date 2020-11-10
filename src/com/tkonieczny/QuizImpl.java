@@ -1,12 +1,21 @@
 package com.tkonieczny;
 
-public class QuizImpl {
+public class QuizImpl implements Quiz{
     private int digit;
 
     public QuizImpl() {
-        this.digit = 254;	// zmienna moze ulegac zmianie!
+        this.digit = 196;	// zmienna moze ulegac zmianie!
     }
 
-    // implementacja metody isCorrectValue...
+    @Override
+    public void isCorrectValue(int value) throws ParamTooLarge, ParamTooSmall {
+        if(value < this.digit){
+            throw new ParamTooSmall();
+        }
+        else if(value > this.digit){
+            throw new ParamTooLarge();
+        }
+    }
+
 
 }

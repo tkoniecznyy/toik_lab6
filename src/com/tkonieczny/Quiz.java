@@ -20,4 +20,4 @@ interface Quiz {
     class ParamTooSmall extends Exception {}
 }
 
-/** nalezy zaimplementowac interfejs Quiz. */
+
